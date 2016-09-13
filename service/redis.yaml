@@ -1,0 +1,12 @@
+service:
+  name: redis
+  ports:
+    - redis_server_port
+  containers:
+    - name: redis
+      image: redis
+      probes:
+        readiness: "true"
+        liveness: "true"
+      daemon:
+        command: redis-server --port {{redis_server_port}}

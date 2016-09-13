@@ -1,0 +1,5 @@
+configs:
+  redis_urls: http://redis:6379
+  redis_server_port: 6379
+versions:
+  redis_version: v3.0.1
